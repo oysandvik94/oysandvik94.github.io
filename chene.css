@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+body{
+		font-family: Crimson Text, serif;
+
+}
+
+#tre{
+	font-size: 5em;
+	text-align: center;
+
+}
+
+nav{
+	margin-top: 5em;
+	font-size: 2em;
+	text-align: center;
+
+}
+
+.atlas, .garage{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border-bottom: 2px solid black;
+	padding: 0 10px;
+}
+
+#tittel{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 0 10px;
+}
+
+a:hover{
+	font-weight: bold;
+}
+
+.atlas{
+	margin-right: 150px;
+}
+
+.garage{
+}
+
+footer{
+	background-image: url('images/footer.png');
+	width: 100%;
+	height: 500px;
+	background-size: 100% 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+#video {
+  text-align:center;
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+
+#atlasFrame {
+	text-align:center;
+  	margin-top: 7em;
+ 	margin-bottom: 7em;
+}
+
+#facebook{
+	color: white;
+	position: fixed;
+	bottom: 1em;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: rgba(0, 0, 0, 0.6);
+}
+
+
+.mediaLink{
+	color: white;
+	text-decoration: none;
+}
+
+li a {
+	display: block;
+}
+
+#linkListe {
+	overflow: hidden;
+	list-style: none;
+}
+
+li{
+	float: left;
+	padding-right: 2em;
+}
