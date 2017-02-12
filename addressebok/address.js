@@ -159,8 +159,15 @@ function modifyEntry(idnumberNow){
 	var listItem = findItem(idnumberNow);
 	var inputramme = document.getElementById("input");
 	inputramme.innerHTML = '<div id="verktoy">\
-			<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()"/>\
-			<span id="plus" class="fa fa-minus-square-o" onclick="removeField()"></span>\
+				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
+				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
+				<select name="sort" id="sort">\
+					<option value="1">Name</option>\
+					<option value="2">Telephone</option>\
+					<option value="3">Email</option>\
+				</select>\
+			<span id="plus" class="fa fa-minus-square-o fa-lg" onclick="removeField()"></span>\
+			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
 		</div>\
 		<h2>Add entry</h2>\
 		<form name="entry" id="entry">\
@@ -195,9 +202,17 @@ function pushModify(idnumberNow){
 function confirmModify(){
 	var inputramme = document.getElementById("input");
 	inputramme.innerHTML = '<div id="verktoy">\
-			<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()"/>\
-			<span id="plus" class="fa fa-plus-square-o" onclick="addField()"></span>\
-			</div><h2>Modification successfull!</h2>';
+				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
+				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
+				<select name="sort" id="sort">\
+					<option value="1">Name</option>\
+					<option value="2">Telephone</option>\
+					<option value="3">Email</option>\
+				</select>\
+			<span id="plus" class="fa fa-plus-square-o fa-lg" onclick="addField()"></span>\
+			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
+		</div>\
+			<h2>Modification successfull!</h2>';
 }
 
 
