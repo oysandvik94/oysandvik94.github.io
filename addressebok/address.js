@@ -23,7 +23,7 @@ function addEntry(index){
 	if (validated){
 		var newentry = new Entry(enteredName, enteredTel, enteredEmail);
 		contactList.push(newentry);	
-		printEntry();
+		sortList();
 	    return false;
 	}
 	return false;
@@ -106,19 +106,11 @@ function init(){
 }
 
 function addField(){
-	var inputramme = document.getElementById("input");
-	inputramme.innerHTML = '<div id="verktoy">\
-				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
-				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
-				<select name="sort" id="sort">\
-					<option value="1">Name</option>\
-					<option value="2">Telephone</option>\
-					<option value="3">Email</option>\
-				</select>\
-			<span id="plus" class="fa fa-minus-square-o fa-lg" onclick="removeField()"></span>\
-			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
-		</div>\
-	<h2>Add entry</h2>\
+	var formJS = document.getElementById("formJS");
+	var plus = document.getElementById("plus");
+	plus.className = "fa fa-minus-square-o fa-lg";
+	plus.setAttribute('onclick','removeField()') ;
+	formJS.innerHTML +='<h2>Add entry</h2>\
 		<form name="entry" id="entry">\
 			<label for="name">Name:  </label> \
 			<input type="text" name="name" id="name" class="entryinput" /><br/>\
@@ -128,21 +120,17 @@ function addField(){
 			<input type="text" name="email" id="email" class="entryinput"> <br/>\
 			<button name="add" onclick="return addEntry();">Add</button>\
 		</form>';
+
+
 }
 
+
 function removeField(){
-	var inputramme = document.getElementById("input");
-	inputramme.innerHTML = '<div id="verktoy">\
-				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
-				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
-				<select name="sort" id="sort">\
-					<option value="1">Name</option>\
-					<option value="2">Telephone</option>\
-					<option value="3">Email</option>\
-				</select>\
-			<span id="plus" class="fa fa-plus-square-o fa-lg" onclick="addField()"></span>\
-			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
-		</div>';
+	var formJS = document.getElementById("formJS");
+	var plus = document.getElementById("plus");
+	plus.className = "fa fa-plus-square-o fa-lg";
+	plus.setAttribute('onclick','addField()') ;
+	formJS.innerHTML = "";
 }
 
 function removeEntry(idnumberNow){
@@ -157,19 +145,11 @@ function removeEntry(idnumberNow){
 
 function modifyEntry(idnumberNow){
 	var listItem = findItem(idnumberNow);
-	var inputramme = document.getElementById("input");
-	inputramme.innerHTML = '<div id="verktoy">\
-				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
-				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
-				<select name="sort" id="sort">\
-					<option value="1">Name</option>\
-					<option value="2">Telephone</option>\
-					<option value="3">Email</option>\
-				</select>\
-			<span id="plus" class="fa fa-minus-square-o fa-lg" onclick="removeField()"></span>\
-			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
-		</div>\
-		<h2>Add entry</h2>\
+	var formJS = document.getElementById("formJS");
+	var plus = document.getElementById("plus");
+	plus.className = "fa fa-minus-square-o fa-lg";
+	plus.setAttribute('onclick','removeField()') ;
+	formJS.innerHTML = '<h2>Modify entry</h2>\
 		<form name="entry" id="entry">\
 			<label for="name">Name:  </label> \
 			<input type="text" name="name" id="name" class="entryinput" value="'+listItem.name+'" /><br/>\
@@ -192,7 +172,7 @@ function pushModify(idnumberNow){
 		listItem.name = enteredName;
 		listItem.tel = enteredTel;
 		listItem.email = enteredEmail;
-		printEntry();
+		sortList();
 		confirmModify();
 	}
 
@@ -200,19 +180,11 @@ function pushModify(idnumberNow){
 }
 
 function confirmModify(){
-	var inputramme = document.getElementById("input");
-	inputramme.innerHTML = '<div id="verktoy">\
-				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />\
-				<span id="sortButton" class="fa fa-sort fa-lg"></span>\
-				<select name="sort" id="sort">\
-					<option value="1">Name</option>\
-					<option value="2">Telephone</option>\
-					<option value="3">Email</option>\
-				</select>\
-			<span id="plus" class="fa fa-plus-square-o fa-lg" onclick="addField()"></span>\
-			<span id="settings" class="fa fa-cog fa-lg"></span><hr>\
-		</div>\
-			<h2>Modification successfull!</h2>';
+	var formJS = document.getElementById("formJS");
+	var plus = document.getElementById("plus");
+	plus.className = "fa fa-plus-square-o fa-lg";
+	plus.setAttribute('onclick','addField()') ;
+	formJS.innerHTML = '<h2>Modification successfull!</h2>';
 }
 
 
@@ -224,4 +196,49 @@ function findItem(idnumberNow){
 		}
 	});
 	return listItem;
+}
+
+function sortList(){
+	var sortItem = document.getElementById("sort");
+	switch(sortItem.options[sortItem.selectedIndex].value){
+		case "0":
+			contactList.sort(function(a, b){
+	    	return a.id-b.id
+			})
+			break;
+		case "1":
+			contactList.sort(function(a, b){
+		    var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+		    if (nameA < nameB)
+		        return -1 
+		    if (nameA > nameB)
+		        return 1
+		    return 0
+			})
+			break;
+		case "2":
+			contactList.sort(function(a, b){
+	    	return a.tel-b.tel
+			})
+		break;
+		case "3":
+			contactList.sort(function(a, b){
+		    var emailA=a.email.toLowerCase(), emailB=b.email.toLowerCase()
+		    if (emailA < emailB)
+		        return -1 
+		    if (emailA > emailB)
+		        return 1
+		    return 0
+			})
+		break;
+	}
+	printEntry();
+}
+
+function addSettings(){
+	var formJS = document.getElementById("formJS");
+	var plus = document.getElementById("plus");
+	plus.className = "fa fa-minus-square-o fa-lg";
+	plus.setAttribute('onclick','removeField()') ;
+	formJS.innerHTML = '<h2> Under construction </h2>';
 }

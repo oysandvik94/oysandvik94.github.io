@@ -9,20 +9,20 @@
 <body>
 	<div id="contentwrapper">
 		<h1>Address book</h1>
-		
 		<div id="input" class="boxstyle">
 			<div id="verktoy">
 				<input type="text" name="search" id="search" placeholder="Search..." oninput="printSearch()" />
-				<span id="sortButton" class="fa fa-sort fa-lg"></span>
+				<span id="sortButton" class="fa fa-sort fa-lg" onclick="sortList()"></span>
 				<select name="sort" id="sort">
+					<option value="0">Sort...</option>
 					<option value="1">Name</option>
 					<option value="2">Telephone</option>
 					<option value="3">Email</option>
 				</select>
 				<span id="plus" class="fa fa-plus-square-o fa-lg" onclick="addField()"></span>
-				<span id="settings" class="fa fa-cog fa-lg"></span>
+				<span id="settings" class="fa fa-cog fa-lg" onclick="addSettings()"></span>
 				<hr>
-			
+			<div id="formJS"></div>
 			</div>
 		</div>
 		<div id="listwrapper" class="boxstyle">
