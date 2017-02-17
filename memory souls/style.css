@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+*{
+    font-family: 'Cinzel', serif;
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 0 0 orange, -1px 0 0 orange, 0 1px 0 orange, 0 -1px 0 orange, 1px 1px orange, -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange;
+    font-size: 3em;
+}
+
+#spillbrett {
+    width: 1200px;
+    height: 500px;
+    background-color: black;
+    box-shadow: 0px 0px 30px 5px #ee7600;
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+}
+
+#title {
+    text-align: center;
+}
+
+#startbutton {
+    box-shadow: 0px 0px 30px 5px #ee7600;
+    text-shadow: 0px 0px 3px #ee7600;
+    font-weight: bold;
+    font-size: 2em;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    margin-top: -100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+#enter{
+    color: white;
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+input{
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    
+}
+
+#player1name{
+    top: 150px;
+}
+
+#player2name{
+    top: 180px;
+}
+
+
+
+.card, .valgt, .rett{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #ee7600;
+    box-shadow: 0px 0px 20px 2px #ee7600;
+    background-color: white;
+    float: left;
+    margin: 5px;
+    text-align: center;
+}
+
+.cardimg{
+    height: 97px;
+    max-width: 100px;
+    display: none;
+}
+
+#playername{
+    top: 10px;
+}
+
+#score{
+    top: 60px;
+}
+
+p{
+    visibility: hidden;
+    position: absolute;
+    left: 12px;
+    color: antiquewhite;
+    font-size: 1.8em;
+}
+
+
+/*.valgt img, .rett img{
+    visibility: visible;
+}*/
