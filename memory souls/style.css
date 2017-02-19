@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
-
-*{
+* {
     font-family: 'Cinzel', serif;
 }
 
-body{
-    background-color: black;
+body {
+    background-color: #100e11;
 }
 
-h1{
+h1 {
     color: white;
     text-shadow: 1px 0 0 orange, -1px 0 0 orange, 0 1px 0 orange, 0 -1px 0 orange, 1px 1px orange, -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange;
     font-size: 3em;
@@ -16,8 +15,8 @@ h1{
 
 #spillbrett {
     width: 1200px;
-    height: 500px;
-    background-color: black;
+    height: 550px;
+    background-color: #100e11;
     box-shadow: 0px 0px 30px 5px #ee7600;
     border-radius: 20px;
     position: relative;
@@ -38,41 +37,51 @@ h1{
     margin-left: -100px;
     margin-top: -100px;
     position: relative;
-    top: 50%;
+    top: 45%;
     left: 50%;
 }
 
-#enter{
+#enter {
     color: white;
     position: absolute;
     left: 500px;
-    top: 100px;
+    top: 90px;
     width: 200px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.85em;
 }
 
-input{
+#instr{
+    color: white;
+    position: absolute;
+    left: 500px;
+    top: 350px;
+    width: 200px;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: 
+}
+
+input {
     position: absolute;
     display: block;
     height: 20px;
     width: 200px;
     left: 50%;
     margin-left: -100px;
-    
 }
 
-#player1name{
+#player1name {
     top: 150px;
 }
 
-#player2name{
+#player2name {
     top: 180px;
 }
 
-
-
-.card, .valgt, .rett{
+.card,
+.valgt,
+.rett {
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -82,31 +91,97 @@ input{
     float: left;
     margin: 5px;
     text-align: center;
+    z-index: 3;
 }
 
-.cardimg{
+.black{
+    width: 100px;
+    height: 100px;
+    background-color: #100e11;
+    float: left;
+    margin: 5px;
+    text-align: center;
+}
+
+.cardimg {
     height: 97px;
     max-width: 100px;
     display: none;
 }
 
-#playername{
-    top: 10px;
-}
-
-#score{
-    top: 60px;
-}
-
-p{
+p {
     visibility: hidden;
-    position: absolute;
-    left: 12px;
+    color: antiquewhite;
+    font-size: 1.8em;
+    position: relative;
+    margin: 0;
+}
+
+h5 {
     color: antiquewhite;
     font-size: 1.8em;
 }
 
+#nameholder {
+    position: absolute;
+    text-align: center;
+    width: 258px;
+    margin-top: 30px;
+}
 
-/*.valgt img, .rett img{
-    visibility: visible;
-}*/
+#nameholder2 {
+    position: absolute;
+    text-align: center;
+    width: 258px;
+    margin-top: 30px;
+    right: 0px;
+}
+
+#nameholder p,
+#nameholder2 p {
+    padding-bottom: 10px;
+}
+
+#trackerdiv {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#trackerdiv p{
+    display: inline-block;
+}
+
+#time{
+    padding-right: 150px;
+    width: 100px;
+}
+
+
+#only {
+    font-style: italic;
+}
+
+#line {
+    position: absolute;
+    top: 55px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    z-index: -1;
+}
+
+#line hr{
+    border-color: #ee7600;
+    box-shadow: 0px 0px 25px 2px white;
+}
+
+#endscreen {
+    position: absolute;
+    top: 150px;
+    left: 420px;
+    width: 600px;
+    z-index: 1;
+    display: none;
+    text-align: center;
+}
