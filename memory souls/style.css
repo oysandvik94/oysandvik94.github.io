@@ -51,7 +51,7 @@ h1 {
     font-size: 1.85em;
 }
 
-#instr{
+#instr {
     color: white;
     position: absolute;
     left: 500px;
@@ -59,7 +59,6 @@ h1 {
     width: 200px;
     text-align: center;
     font-size: 0.9em;
-    font-style: 
 }
 
 input {
@@ -94,19 +93,9 @@ input {
     z-index: 3;
 }
 
-.black{
-    width: 100px;
-    height: 100px;
-    background-color: #100e11;
-    float: left;
-    margin: 5px;
-    text-align: center;
-}
-
 .cardimg {
-    height: 97px;
+    height: 0px;
     max-width: 100px;
-    display: none;
 }
 
 p {
@@ -142,21 +131,10 @@ h5 {
     padding-bottom: 10px;
 }
 
-#trackerdiv {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-#trackerdiv p{
-    display: inline-block;
-}
-
-#time{
-    padding-right: 150px;
+#time {
+    margin-left: 70px;
     width: 100px;
 }
-
 
 #only {
     font-style: italic;
@@ -171,7 +149,7 @@ h5 {
     z-index: -1;
 }
 
-#line hr{
+#line hr {
     border-color: #ee7600;
     box-shadow: 0px 0px 25px 2px white;
 }
@@ -179,7 +157,7 @@ h5 {
 #endscreen {
     position: absolute;
     top: 150px;
-    left: 420px;
+    left: 400px;
     width: 600px;
     z-index: 1;
     display: none;

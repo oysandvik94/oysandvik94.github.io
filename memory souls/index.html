@@ -12,9 +12,11 @@
 
 <body>
     <h1 id="title">Memory Souls</h1>
-    <div id="line"><hr></div>
+    <div id="line">
+        <hr>
+    </div>
     <div id="endscreen">
-        <img src="images/bonfire.gif" alt="bonfire" width="600px"/>
+        <img src="images/bonfire.gif" alt="bonfire" width="600px" />
         <h5 id="vinner"></h5>
     </div>
     <div id="spillbrett">
@@ -22,11 +24,17 @@
         <div id="nameholder" class="nameholders">
             <p id="name1" class="single"></p>
             <p id="score1" class="single">Score: 0</p>
+            <p class="single">Elapsed Time:</p>
+            <p id="time" class="single">00:00:00</p>
+            <p id="flipcounter" class="single">Total flips:</p>
             <p id="turnid1" class="single">Your turn</p>
         </div>
         <div id="nameholder2" class="nameholders">
             <p id="name2"></p>
             <p id="score2">Score: 0</p>
+            <p>Elapsed Time:</p>
+            <p id="time2">00:00:00</p>
+            <p id="flipcounter2">Total flips:</p>
             <p id="turnid2">Your turn</p>
         </div>
 
@@ -36,11 +44,6 @@
         <input type="text" id="player2name" class="prehide" placeholder="Name 2" />
         <div id="instr" class="prehide">for single player, leave player 2 name <span id="only">blank</span></div>
 
-        <div id="trackerdiv">
-            <p class="single">Elapsed Time:</p>
-            <p id="time" class="single"></p>
-            <p id="flipcounter" class="single">Total flips:</p>
-        </div>
     </div>
 </body>
 
