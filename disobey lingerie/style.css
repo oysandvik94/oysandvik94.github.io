@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+header {
+    text-align: center;
+    height: 150px;
+}
+
+h1 {
+    font-family: 'Bad Script', cursive;
+    font-size: 3em;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#bildecont {
+    text-align: center;
+    margin: auto;
+}
+
+body{
+    margin: 0;
+    background-color: #16161f;
+}
+
+button {
+    width: 50px;
+    height: 35px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: white;
+    color: #16161f;
+    border-radius: 8px;
+}
+
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #16161f;
+    width: 500px;
+    height: 100px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 2);
+    z-index: 1;
+    left: calc(50% - 250px);
+    margin-top: 5px;
+    line-height: 100px;
+    
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline;
+    font-family: 'Bad Script', cursive;
+    font-size: 1.5em;
+}
+
+.dropdown-content a:hover{
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+button:focus {outline:0;}
+
+.show{display: block;}
