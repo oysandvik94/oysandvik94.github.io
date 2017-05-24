@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+	text-align: center;
+}
+
+*{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+textarea{
+	width: 400px;
+}
+
+#btn{
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#container{
+	text-align: center;
+}
+
+#output{
+	position: relative;
+	left: calc(50% - 200px);
+	max-width: 400px;
+	height: 400px;
+	text-align: left;
+}
