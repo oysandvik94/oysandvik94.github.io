@@ -1,26 +1,22 @@
-function mockify(){
-	input = document.getElementById("text").value;
-	result = ""
-	for(i = 0; i < input.length; i++){
-		k = getRndInteger(1, 3);
-		if(i !== 0){
-			if(input[i] == input[i].toLowerCase()) result += input[i].toUpperCase();
-			if(input[i] == input[i].toUpperCase()) result += input[i].toLowerCase();
-		} else {
-			result += input[i].toLowerCase();
-		}
-		
-		for(n = 1; n <= k; n++){
-			console.log(input[i+n]);
-			if(i+n < input.length){
-				result += input[i+n];
-			}
-		}
+function mockify() {
+    var input = document.getElementById("text").value;
+    var out = "";
 
-		i += k;
-	}
-	console.log(result);
-	document.getElementById("output").innerHTML = result;
+    var k = Math.floor(Math.random() * 3) + 1;
+    
+    for (i = 0; i < input.length; i++) {
+    	console.log(k);
+        if (k == 0) {
+            out += input[i].toUpperCase();
+            k = Math.floor(Math.random() * 3) + 1;
+            continue;
+        } else if (k > 0) {
+        	console.log("hei");
+            out += input[i];
+            k--;
+        }
+    }
+    document.getElementById("output").innerHTML = out;
 }
 
 function getRndInteger(min, max) {
