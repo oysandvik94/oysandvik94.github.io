@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#dashboardBody{
+    opacity: 0;
+    transition: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    padding-top: 5px;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-image: linear-gradient(to right, #339966 0%, #f6d365 51%, #339966 100%);
+    background-size: 200% auto;
+    text-align: right;
+}
+
+#wheel-contain{
+    height: 350px;
+    width: 75%;
+    padding-top: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: inline-block;
+}
+
+#card-contain{
+    height: 350px;
+    width: auto;
+    white-space:nowrap; 
+}
+
+#add-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+    height: 140px;
+}
+
+
+.index-fa {
+    font-size: 140px;
+}
+
+.hjul-fa {
+    font-size: 60px;
+}
+
+#wheel-form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    height: 140px;
+    display: none;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background-size: 0% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+}
+
+#add-contain{ 
+    display: inline-block;
+    float: right;
+    /*width: 25%;
+    height: 400px;*/
+    padding-top: 130px;
+    height: 270px;
+    width: 25%
+}
+
+.page-divider {
+    border: none;
+    width: 95%;
+    height: 1px;
+    color: #000000;
+    background-color: #000000;
+}
+
+.card {
+    padding: 10px;
+    background-color: #ffb366;
+    margin-left: 60px;
+    position: relative;
+    height: 280px;
+    width: 200px;
+    border: 2px solid black;
+    display: inline-block;
+    color: white;
+    overflow: auto;
+}
+
+#logoBak{
+    opacity: 1;
+    /*transform: 0;*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -350px;
+}
+
+#logoFram{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -350px;
+}
+
+#logoTekst{
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    text-align: center;
+    font-size: 50px;
+    opacity: 0;
+    transform: 0;
+}
+
+/*.card-fix {
+    top: -173px;
+}*/
+
+.card-info{
+    padding-top: 20px;
+}
+
+.card-title {
+    font-size: 35px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.52); 
+    border-radius: 10px;
+    background-color: #D4D4D4; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(3, 3, 3, 0.94);
+    background:rgba(255, 255, 255, 0.7);
+}
+
+.colorChoice{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+#addWheelBtn{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    display: block;
+    left: 74.5px;
+    bottom: 25px;
+}
+
+#title{
+    margin-bottom: 20px;
+}
+
+#wheel-form label{
+    font-size: 20px;
+}
+/*hjul.hmtl*/
+
+#container-month{
+    height: auto;
+    white-space:nowrap; 
+}
+
+#parent-cont{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.month h2{
+    margin-left: 45px;
+}
+
+html, body{
+    height: calc(100% - 25px);
+}
+
+.header-title{
+    margin: 0;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 23px;
+    color: white;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.event{
+    height: 100px;
+    width: 100px;
+    background-color: #339966;
+    border: 2px solid black;
+}
+
+#add-event{
+    position: fixed;
+    right: 35px;
+    bottom: 1px;
+}
+
+#event-form{
+    position: fixed;
+    height: 350px;
+    width: 400px;
+    border: 2px solid black;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -200px;
+    padding-left: 20px;
+    display: none;
+}
+
+#event-form input, #event-form select{
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#brukerSok{
+    width: 170px;
+    display: none;
+    margin-right: 10px;
+    border: none;
+    height: 27px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+.share-fa{
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
+.fa-ban{
+    font-size: 30px;
+    color: white;
+    display: none;
+    margin-right: 10px;
+}
+
+#sokCont{
+    position: relative;
+    bottom: 5px;
+}
+
+#results{
+    top: 41px;
+    display: none;
+    background-color: white;
+    position: fixed;
+    right: 134px;
+}
+
+.searchResult{
+    background-color: white;
+    width: 260px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+
+.searchResult:nth-child(odd) {
+    /*background: #ffb366;*/
+    background-color: #F3F3F3;
+}
+
+.infoResult{
+    width: 200px;
+    display: inline-block;
+}
+
+.inviteBtn{
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    right: 5px;
+}
+
+.nameResult, .emailResult{
+    margin: 0;
+}
+/* login.html */
+#loginBox{
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    padding: 16px;
+}
+
+.loginInput{
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#loginBtn{
+    background-image: linear-gradient(to right, #339966 0%, #f6d365 51%, #339966 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    opacity: 1;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    height: 44px;
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+#loginBtn:hover{
+    background-position: right center;
+}
+
+.loginMsg{
+    color: red;
+    text-align: center;
+    position: fixed;
+    bottom: 195px;
+    left: 50%;
+    margin-left: -113px;
+}
